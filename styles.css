@@ -1,0 +1,165 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  background: hsl(185, 41%, 84%);
+}
+
+.container {
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container header {
+  margin: 2rem;
+}
+
+.container h1 {
+  display: none;
+}
+
+.calculator {
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.display {
+  background: hsl(183, 100%, 15%);
+  color: hsl(184, 14%, 56%);
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.display > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display > div > .label {
+  display: flex;
+  flex-direction: column;
+}
+
+.display > div > .label > span:first-child {
+  color: #fff;
+}
+
+.display > div > .label > span:nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.display .amount {
+  font-size: 2rem;
+}
+
+.display button {
+  background: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+.input-container label,
+.tips-container legend {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.input-container input {
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  text-align: right;
+  background-image: url('./images/icon-dollar.svg');
+  background-color: hsl(189, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+}
+
+.tips-container {
+  border: none;
+}
+
+.tips-container label {
+  background: hsl(183, 100%, 15%);
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.tips-container label.checked {
+  background: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
+}
+
+.tips-container label input {
+  display: none;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#custom-tip {
+  text-align: right;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+}
+
+@media (min-width: 650px) {
+  .calculator {
+    flex-direction: row;
+    max-width: 900px;
+    border-radius: 1rem;
+  }
+
+  .container header {
+    margin: 4rem;
+  }
+  
+  .form, .display {
+    flex: 1 1 0;
+  }
+
+  .radio-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .display button {
+    margin-top: auto;
+  }
+}
