@@ -78,7 +78,7 @@ const Input = ({ id, label, value, onChange }) => {
   return (
     <div className="input-container">
       <label htmlFor={id}>{label}</label>
-      <input id={id} value={value} placeholder="0" onChange={onChange} />
+      <input className={id} id={id} value={value} placeholder="0" onChange={onChange} />
     </div>
   );
 }

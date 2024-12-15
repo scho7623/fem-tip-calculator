@@ -101,6 +101,10 @@ body {
   background-position: 0.5rem;
 }
 
+.input-container input.people {
+  background-image: url('./images/icon-person.svg');
+}
+
 .tips-container {
   border: none;
 }
